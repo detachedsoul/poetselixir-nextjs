@@ -1,6 +1,16 @@
+import AdminComponent from '../components/AdminComponent';
+import Head from 'next/head';
+
 const Admin = () => {
     return (
-        <h1>Admin Page :(</h1>
+        <>
+            <Head>
+                <title>Poets's Elixir &mdash; Admin</title>
+                <meta name="description" content="Poet's Elixir Admins" />
+            </Head>
+
+            <AdminComponent />
+        </>
     );
 }
 

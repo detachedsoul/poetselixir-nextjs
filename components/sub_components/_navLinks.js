@@ -6,31 +6,31 @@ const NavLinks = ({ navLinkClickEvent }) => {
         {
             id: 1,
             linkName: "Home",
-            routeNanme: "/",
+            routeName: "/",
             icon: "fr fi-rr-bank"
         },
         {
             id: 2,
             linkName: "Categories",
-            routeNanme: "/categories",
+            routeName: "/categories",
             icon: "fr fi-rr-settings"
         },
         {
             id: 3,
             linkName: "Admin",
-            routeNanme: "/admin",
+            routeName: "/admin",
             icon: "fr fi-rr-user"
         },
         {
             id: 4,
             linkName: "Account",
-            routeNanme: "/account",
+            routeName: "/account",
             icon: "fr fi-rr-user-add"
         },
         {
             id: 5,
             linkName: "Contact",
-            routeNanme: "/contact",
+            routeName: "/contact",
             icon: "fr fi-rr-envelope"
         }
     ];
@@ -43,7 +43,7 @@ const NavLinks = ({ navLinkClickEvent }) => {
                 navLinks.map(navLink => (
                     <li key={navLink.id}>
 
-                        <Link href={navLink.routeNanme}>
+                        <Link href={navLink.routeName}>
                             
                             <a className="nav-links flex items-center gap-2.5 py-2 px-4 rounded-tl-full rounded-bl-full ease-linear hover:bg-main-color hover:text-white hover:font-semibold lg:hover:text-main-color lg:hover:bg-transparent" onClick={navLinkClickEvent}>
                                 

@@ -102,7 +102,7 @@ const RandomCategoryPosts = () => {
                                 posts[category.postReferrenceID].map(post => (
                                     <article className="grid gap-4 md:col-span-6 lg:col-span-4" key={post.id}>
 
-                                        <Image className="aspect-video object-center object-cover h-[200px] rounded-lg" src={post.image} alt={post.title} objectFit="cover" width="100%" height="230px" objectPosition="center" quality={100} title={post.title}></Image>
+                                        <Image className="aspect-square object-center object-cover h-[200px] rounded-lg" src={post.image} alt={post.title} objectFit="cover" width="100%" height="230px" objectPosition="center" quality={100} title={post.title} layout="intrinsic"></Image>
 
                                         <div className="grid gap-2">
 

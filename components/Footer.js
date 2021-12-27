@@ -19,7 +19,7 @@ const Footer = () => {
 
             let scrollToTopBtn = document.querySelector('.scroll-to-top-btn');
 
-            if (document.documentElement.scrollTop >= 300 || document.body.scrollTop >= 300) {
+            if (document.documentElement.scrollTop >= 200 || document.body.scrollTop >= 200) {
                 scrollToTopBtn.classList.add('show-to-top-btn');
             } else {
                 scrollToTopBtn.classList.remove('show-to-top-btn');
