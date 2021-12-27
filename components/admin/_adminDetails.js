@@ -34,7 +34,7 @@ const AdminDetails = () => {
                 userDetails.map(user => (
                     <div className="grid gap-3 sm:col-span-6 lg:col-span-4" key={ user.id }>
 
-                        <Image className="aspect-square object-center object-cover object-top h-[200px] rounded-lg" src={user.profilePic} alt={user.name} objectFit="cover" width="100%" height="230px" objectPosition="center" quality={100} title={user.name} layout="intrinsic"></Image>
+                        <Image className="aspect-square object-center object-cover h-[200px] rounded-lg" src={user.profilePic} alt={user.name} objectFit="cover" width="100%" height="230px" objectPosition="center" quality={100} title={user.name} layout="intrinsic"></Image>
 
                         <div className="grid gap-2 pl-2">
 

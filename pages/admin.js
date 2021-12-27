@@ -5,7 +5,7 @@ const Admin = () => {
     return (
         <>
             <Head>
-                <title>Poets's Elixir &mdash; Admin</title>
+                <title>Poet's Elixir &mdash; Admin</title>
                 <meta name="description" content="Poet's Elixir Admins" />
             </Head>
 
