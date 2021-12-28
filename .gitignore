@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 /src
-/styles/fonts.css
+/public/fonts/fonts.css
 /public/icons/uicons.css
 /.pnp
 .pnp.js

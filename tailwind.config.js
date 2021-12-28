@@ -11,10 +11,10 @@ module.exports = {
 				"secondary-color": "#581A09",
 			},
 			fontFamily: {
-				"pacifico": "Pacifico, sans-serif",
+				"pacifico": "Pacifico, cursive",
 				"open-sans": "'Open Sans', sans-serif",
 				"poppins": "'Poppins', sans-serif",
-				"luckiest-guy": "'Luckiest Guy', sans-serif",
+				"luckiest-guy": "'Luckiest Guy', cursive",
 				"mulish": "'Mulish', sans-serif",
 			},
 			backgroundImage: {

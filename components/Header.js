@@ -31,7 +31,7 @@ const Header = () => {
         document.querySelector('.search-form-container').classList.toggle('\[transform\:translateY\(-10rem\)\]');
     };
 
-    const removeActiveClassFromLinks = () => {
+    const removeActiveClassFromLinks = (navLink) => {
         let navLinks = document.querySelectorAll('.nav-links');
         navLinks.forEach(navLink => {
             navLink.classList.remove('active');
@@ -54,7 +54,7 @@ const Header = () => {
                 <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
             </Head>
 
-            <header className="flex flex-col gap-4 bg-opacity-50 backdrop-blur-md bg-white text-gray-900 sticky top-0 shadow-sm z-50 lg:flex-row lg:justify-between lg:items-center lg:px-4">
+            <header className="flex flex-col gap-4 bg-opacity-50 backdrop-blur-lg bg-white text-gray-900 sticky top-0 shadow-sm z-50 lg:flex-row lg:justify-between lg:items-center lg:px-4">
 
                 <div className="flex items-center gap-4 justify-between py-0.5 px-4 lg:px-0">
                     
