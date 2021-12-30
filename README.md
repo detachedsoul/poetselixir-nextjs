@@ -12,4 +12,6 @@ This is a reproduction of `detachedsoul.github.io/poetselxiir` made with Nextjs.
 
 - Made the contact page
 
+- Made the account page, changed from using ordinary functions for things like toggling the navbar to using the `useState` react hook, and also tweaked the UI (changed things things like background colors and made things a little consistent)
+
 The live demo of my progress can be found on [https://poetselixir.netlify.app](https://poetselixir.netlify.app)

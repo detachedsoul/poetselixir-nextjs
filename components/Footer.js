@@ -85,7 +85,7 @@ const Footer = () => {
                             <p className="flex items-center gap-4">
 
                                 <a className="bg-sky-700 rounded-full text-xl hover:animate-pulse active:animate-pulse text-white" href="https://web.facebook.com/IamWisdomOjimah" target="_blank" rel="noopener noreferrer" aria-label="Contact us on Facebook" title="Reach us on Facebook">
-                                    <i className="fab fa-facebook-f text-base relative -left-[0.05rem] py-2 px-[0.7rem]"></i>
+                                    <i className="fab fa-facebook-f text-base relative py-2 px-[0.7rem]"></i>
                                 </a>
                                 
                                 <a className="bg-white rounded-full text-xl text-gray-700 hover:animate-pulse active:animate-pulse" href="https://github.com/detachedsoul" target="_blank" rel="noopener noreferrer" aria-label="GitHub account" title="GitHub account">

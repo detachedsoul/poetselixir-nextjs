@@ -3,7 +3,6 @@ import Link from "next/link";
 
 const Admin = () => {
     return (
-
         <div className="py-12">
 
             <div className="border-b border-gray-400 pb-4">

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import NavLinks from "./sub_components/_navLinks";
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -9,6 +9,9 @@ import SearchForm from "./sub_components/_searchForm";
 const Header = () => {
 
     const currentPath = useRouter();
+
+    const [isActive, setNavActive] = useState(false);
+    const [isSearchBarActive, setSearchBarActive] = useState(false);
 
     useEffect(() => {
 
@@ -22,16 +25,12 @@ const Header = () => {
         });
 
     }, [currentPath]);
-    
-    const toggleNavigationMenu = () => {
-        document.querySelector('nav').classList.toggle('\[transform\:translateY\(-150\%\)\]');
-    };
-
-    const toggleSearchForm = () => {
-        document.querySelector('.search-form-container').classList.toggle('\[transform\:translateY\(-10rem\)\]');
-    };
 
     const removeActiveClassFromLinks = (navLink) => {
+        if (isSearchBarActive) {
+            setSearchBarActive (() => !isSearchBarActive);
+        }
+
         let navLinks = document.querySelectorAll('.nav-links');
         navLinks.forEach(navLink => {
             navLink.classList.remove('active');
@@ -44,7 +43,9 @@ const Header = () => {
     };
 
     const closeNav = () => {
-        toggleNavigationMenu();
+        if (isActive) {
+            setNavActive (() => !isActive);
+        }
         removeActiveClassFromLinks();
     };
 
@@ -54,11 +55,13 @@ const Header = () => {
                 <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
             </Head>
 
-            <header className="flex flex-col gap-4 bg-opacity-50 backdrop-blur-lg bg-white text-gray-900 sticky top-0 shadow-sm z-50 lg:flex-row lg:justify-between lg:items-center lg:px-4">
+            <header className="flex flex-col gap-4 text-gray-900 sticky top-0 shadow-sm z-50 lg:bg-white lg:bg-opacity-50 lg:backdrop-blur-3xl lg:flex-row lg:justify-between lg:items-center lg:px-4">
 
-                <div className="flex items-center gap-4 justify-between py-0.5 px-4 lg:px-0">
+                <div className="backdrop-blur-3xl bg-white bg-opacity-50 flex items-center gap-4 justify-between py-0.5 px-4 lg:px-0 lg:bg-transparent lg:opacity-100 lg:backdrop-blur-none">
                     
-                    <button className="lg:hidden" type="button" aria-label="Navigation menu toggle button" onClick={ toggleNavigationMenu }>
+                    <button className="lg:hidden" type="button" aria-label="Navigation menu toggle button" onClick={() => {
+                        setNavActive (() => !isActive);
+                    }}>
                         <i className="fr fi-rr-menu-burger relative top-0.5"></i>
                     </button>
 
@@ -68,19 +71,21 @@ const Header = () => {
                         </a>
                     </Link>
 
-                    <button className="lg:hidden" type="button" aria-label="Search form toggle button" onClick={ toggleSearchForm }>
+                    <button className="lg:hidden" type="button" aria-label="Search form toggle button" onClick={() => {
+                        setSearchBarActive (() => !isSearchBarActive);
+                    }}>
                         <i className="fr fi-rr-search relative top-0.5"></i>
                     </button>
 
                 </div>
 
-                <nav className="bg-slate-200 absolute right-0 top-full [transform:translateY(-150%)] transition-transform delay-500 ease-linear z-10 shadow w-4/5 pl-4 py-4 [transform-origin:0_0] lg:static lg:translate-y-0 lg:w-auto lg:bg-transparent lg:shadow-none lg:p-0 lg:shrink-0">
+                <nav className={`bg-white absolute right-0 top-full ${isActive ? 'translate-y-0' : '[transform:translateY(-150%)]'} transition-transform delay-500 ease-linear z-10 shadow w-4/5 pl-4 py-4 [transform-origin:0_0] lg:static lg:translate-y-0 lg:w-auto lg:bg-transparent lg:shadow-none lg:p-0 lg:shrink-0`}>
 
                     <NavLinks navLinkClickEvent={ addActiveClass } />
                     
                 </nav>
 
-                <SearchForm />
+                <SearchForm active={isSearchBarActive} />
 
             </header>
         </>

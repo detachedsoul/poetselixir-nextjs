@@ -26,20 +26,20 @@ const ContactComponent = () => {
 
                 <div className="md:border-r md:border-r-gray-400 md:pr-12 lg:col-span-7">
 
-                    <h1 className="header text-3xl mb-4">
+                    <h1 className="header text-xl mb-5">
                         Fill the form. It's easy.
                     </h1>
 
                     <form className="grid gap-4" method="post">
 
-                        <div className="grid gap-y-2 gap-x-4 md:grid-cols-12">
+                        <div className="grid gap-y-3 gap-x-4 md:grid-cols-12">
 
                             <label className="grid gap-1 lg:col-span-6" htmlFor="name">
                                 <span>
                                     Name
                                     <span className="text-rose-800 relative pl-0.5 top-[0.18rem]">*</span>
                                 </span>
-                                <input className="transition-all ease-linear delay-500 rounded-lg py-1.5 px-4 bg-slate-50 border border-gray-300 hover:bg-white focus:outline-none focus:bg-white hover:ring-2 hover:ring-offset-2 hover:ring-main-color/10 hover:py-1 focus:ring-2 focus:ring-offset-2 focus:ring-main-color/10" type="text" id="name" placeholder="Name" autoComplete="off" />
+                                <input className="transition-all ease-linear delay-200 rounded-lg py-1.5 px-4 bg-white placeholder:text-gray-600 border border-gray-400 ring-offset-slate-50 focus:outline-none hover:ring-1 hover:ring-offset-2 hover:ring-main-color/30 focus:ring-1 focus:ring-offset-2 focus:ring-main-color/30" type="text" id="name" placeholder="Name" autoComplete="off" />
                             </label>
 
                             <label className="grid gap-1 lg:col-span-6" htmlFor="email">
@@ -47,7 +47,7 @@ const ContactComponent = () => {
                                     Email
                                     <span className="text-rose-800 relative pl-0.5 top-[0.18rem]">*</span>
                                 </span>
-                                <input className="transition-all ease-linear delay-500 rounded-lg py-1.5 px-4 bg-slate-50 border border-gray-300 hover:bg-white focus:outline-none focus:bg-white hover:ring-2 hover:ring-offset-2 hover:ring-main-color/10 hover:py-1 focus:ring-2 focus:ring-offset-2 focus:ring-main-color/10" type="email" id="email" placeholder="Email" autoComplete="off" />
+                                <input className="transition-all ease-linear delay-200 rounded-lg py-1.5 px-4 bg-white placeholder:text-gray-600 ring-offset-slate-50 border border-gray-400 focus:outline-none hover:ring-1 hover:ring-offset-2 hover:ring-main-color/30 focus:ring-1 focus:ring-offset-2 focus:ring-main-color/30" type="email" id="email" placeholder="Email" autoComplete="off" />
                             </label>
 
                             <label className="grid gap-1 lg:col-span-12" htmlFor="subject">
@@ -55,7 +55,7 @@ const ContactComponent = () => {
                                     Subject
                                     <span className="text-rose-800 relative pl-0.5 top-[0.18rem]">*</span>
                                 </span>
-                                <input className="transition-all ease-linear delay-500 rounded-lg py-1.5 px-4 bg-slate-50 border border-gray-300 hover:bg-white focus:outline-none focus:bg-white hover:ring-2 hover:ring-offset-2 hover:ring-main-color/10 hover:py-1 focus:ring-2 focus:ring-offset-2 focus:ring-main-color/10" type="text" id="subject" placeholder="Subject" autoComplete="off" />
+                                <input className="transition-all ease-linear delay-200 rounded-lg py-1.5 px-4 bg-white placeholder:text-gray-600 ring-offset-slate-50 border border-gray-400 focus:outline-none hover:ring-1 hover:ring-offset-2 hover:ring-main-color/30 focus:ring-1 focus:ring-offset-2 focus:ring-main-color/30" type="text" id="subject" placeholder="Subject" autoComplete="off" />
                             </label>
 
                             <label className="grid gap-1 lg:col-span-12" htmlFor="messageContent">
@@ -63,12 +63,12 @@ const ContactComponent = () => {
                                     Message
                                     <span className="text-rose-800 relative pl-0.5 top-[0.18rem]">*</span>
                                 </span>
-                                <textarea className="transition-all ease-linear delay-500 rounded-lg py-1.5 px-4 bg-slate-50 border border-gray-300 hover:bg-white focus:outline-none focus:bg-white hover:ring-2 hover:ring-offset-2 hover:ring-main-color/10 hover:py-1 focus:ring-2 focus:ring-offset-2 focus:ring-main-color/10" name="messageContent" id="messageContent" rows="5" placeholder="Message"></textarea>
+                                <textarea className="transition-all ease-linear delay-200 rounded-lg py-1.5 px-4 bg-white placeholder:text-gray-600 ring-offset-slate-50 border border-gray-400 focus:outline-none hover:ring-1 hover:ring-offset-2 hover:ring-main-color/30 focus:ring-1 focus:ring-offset-2 focus:ring-main-color/30" name="messageContent" id="messageContent" rows="5" placeholder="Message"></textarea>
                             </label>
 
                         </div>
 
-                        <button className="flex items-center gap-2 bg-main-color/90 text-white border border-main-color rounded-lg py-2 px-3 w-max ml-auto hover:bg-main-color focus:bg-main-color hover:ring-2 hover:ring-offset-2 hover:ring-main-color/10 focus:ring-2 focus:ring-offset-2 focus:ring-main-color/10 active:bg-main-color active:text-white active:ring-2 active:ring-offset-2 active:ring-main-color/10" type="submit">
+                        <button className="flex items-center gap-1 bg-main-color/90 text-white border border-main-color rounded-lg py-1.5 px-3 w-max ml-auto ring-offset-slate-50 hover:bg-main-color focus:bg-main-color hover:ring-1 hover:ring-offset-2 hover:ring-main-color/30 focus:ring-1 focus:ring-offset-2 focus:ring-main-color/30 active:bg-main-color active:text-white active:ring-1 active:ring-offset-2 active:ring-main-color/30" type="submit">
                             Send Message
                             <i className="fr fi-rr-cursor-finger relative top-1"></i>
                         </button>
@@ -79,7 +79,7 @@ const ContactComponent = () => {
 
                 <div className="hidden gap-2 md:grid lg:col-span-5">
 
-                    <h3 className="header text-xl">
+                    <h3 className="header text-2xl">
                         Let's talk about everything
                     </h3>
 
