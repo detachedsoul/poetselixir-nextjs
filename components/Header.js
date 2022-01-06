@@ -12,6 +12,7 @@ const Header = () => {
 
     const [isActive, setNavActive] = useState(false);
     const [isSearchBarActive, setSearchBarActive] = useState(false);
+    const [isDropdownActive, setDropdownActive] = useState(false);
 
     useEffect(() => {
 
@@ -24,7 +25,6 @@ const Header = () => {
                 link.classList.remove('active');
             }
         });
-        
 
     }, [currentPath]);
 
@@ -46,7 +46,10 @@ const Header = () => {
 
     const closeNav = () => {
         if (isActive) {
-            setNavActive (() => !isActive);
+            setNavActive(() => !isActive);
+        }
+        if (isDropdownActive) {
+            setDropdownActive(() => !isDropdownActive);
         }
         removeActiveClassFromLinks();
     };
@@ -83,7 +86,11 @@ const Header = () => {
 
                 <nav className={`bg-white absolute right-0 top-full ${isActive ? 'translate-y-0' : '[transform:translateY(-150%)]'} transition-transform delay-500 ease-linear z-10 shadow w-4/5 pl-4 py-4 [transform-origin:0_0] lg:static lg:translate-y-0 lg:w-auto lg:bg-transparent lg:shadow-none lg:p-0 lg:shrink-0`}>
 
-                    <NavLinks navLinkClickEvent={ addActiveClass } />
+                    <NavLinks 
+                        navLinkClickEvent={ addActiveClass } 
+                        dropdownEvent={ setDropdownActive } 
+                        isDropdownActive={ isDropdownActive } 
+                    />
                     
                 </nav>
 

@@ -1,7 +1,6 @@
-import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 
-const NavLinks = ({ navLinkClickEvent }) => {
+const NavLinks = ({ navLinkClickEvent, dropdownEvent, isDropdownActive }) => {
 
     const navLinks = [
         {
@@ -14,7 +13,7 @@ const NavLinks = ({ navLinkClickEvent }) => {
         {
             id: 2,
             linkName: "Categories",
-            routeName: "/categories",
+            routeName: "/",
             icon: "fr fi-rr-settings",
             isDropdown: true,
             dropdownLinks: [
@@ -58,15 +57,7 @@ const NavLinks = ({ navLinkClickEvent }) => {
         }
     ];
 
-    let dropdownContainer = useRef(null);
-
-    const toggleDropdown = () => {
-        dropdownContainer.current.classList.toggle('scale-0');
-    };
-
-    useEffect(() => {
-        let dropdownToggle = document.querySelector('.dropdownToggle');
-    }, []);
+    // const [isActive, setDropdownActive] = useState(false);
 
     return (
 
@@ -81,7 +72,7 @@ const NavLinks = ({ navLinkClickEvent }) => {
                             <a className="nav-links flex items-center gap-2.5 py-2 px-4 rounded-tl-full rounded-bl-full ease-linear hover:bg-main-color hover:text-white hover:font-semibold lg:hover:text-main-color lg:hover:bg-transparent" onClick={(e) => {
                                 if (navLink.isDropdown) {
                                     e.preventDefault();
-                                    toggleDropdown();
+                                    dropdownEvent(() => !isDropdownActive);
                                     return;
                                 } else {
                                     navLinkClickEvent
@@ -101,7 +92,7 @@ const NavLinks = ({ navLinkClickEvent }) => {
 
                             &&
 
-                            <div className="bg-slate-100 absolute [width:calc(100%-1rem)] lg:w-max z-10 top-[115%] lg:bg-white p-4 shadow-md left-4 rounded transition-all delay-500 ease-in scale-0 lg:top-[120%]" ref={dropdownContainer}>
+                            <div className={`bg-slate-100 absolute [width:calc(100%-1rem)] lg:w-max z-10 top-[115%] lg:bg-white p-4 shadow-md left-4 rounded transition-all delay-500 ease-in lg:top-[120%] ${isDropdownActive ? '' : 'scale-0'}`}>
                                 
                                 <ul className="flex flex-col gap-y-4">
 

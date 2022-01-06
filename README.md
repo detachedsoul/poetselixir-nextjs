@@ -16,4 +16,6 @@ This is a reproduction of [PoetsElixr](https://detachedsoul.github.io/poetselxii
 
 - Made the categories dropdown. This required that I keep track of which links were to have dropdowns (this was achieved by adding an `isDropdown` property in the links objects). Then I had to look for a way to prevent the default tag action, toggle the dropdown, and then for links that didn't have dropdown still keep the same functionality of closing the the navigation container on smaller devices and also apply the `active` class to the current route (current page).
 
+- Refactored the dropdown element to use states for controlling it's visibility.
+
 The live demo of my progress can be found on [https://poetselixir.netlify.app](https://poetselixir.netlify.app)
