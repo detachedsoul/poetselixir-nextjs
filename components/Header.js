@@ -18,11 +18,13 @@ const Header = () => {
         let links = document.querySelectorAll('.nav-links');
         links.forEach(link => {
             if (currentPath.pathname === link.attributes.href.nodeValue) {
+                closeNav();
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');
             }
         });
+        
 
     }, [currentPath]);
 

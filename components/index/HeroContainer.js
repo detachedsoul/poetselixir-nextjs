@@ -1,8 +1,8 @@
 const HeroContainer = () => {
     return (
-        <div className="bg-hero-bg text-white grid place-content-center bg-fixed bg-cover bg-center min-h-[70vh] py-2 px-4">
+        <div className="bg-hero-bg text-white grid place-content-center bg-fixed bg-cover bg-center min-h-[70vh] py-8 px-4">
 
-            <div className="flex flex-col gap-4 lg:w-1/2 lg:ml-4">
+            <div className="flex flex-col gap-4 lg:w-[70%] lg:ml-4">
                 
                 <blockquote>
                     <p>

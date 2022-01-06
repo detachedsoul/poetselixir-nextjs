@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import Link from 'next/link';
 
 const AccountComponent = () => {
@@ -42,26 +43,26 @@ const AccountComponent = () => {
 
                         <div className="grid gap-6 grid-cols-12 border-b border-gray-400 pb-4">
 
-                            <label className="flex items-center col-span-12 border border-gray-400 transition-all ease-linear delay-200 rounded-lg ring-offset-slate-50  hover:ring-1 hover:ring-offset-2 hover:ring-main-color/30 focus-within:ring-1 focus-within:ring-offset-2 focus-within:ring-main-color/30" htmlFor="signInUsername">
+                            <label className="account-label" htmlFor="signInUsername">
                                 <span className="pl-2.5 pr-2 b">
                                     <i className="fr fi-rr-user relative top-0.5"></i>
                                 </span>
 
-                                <input className="w-full py-1.5 pr-4 bg-white rounded-r-lg placeholder:text-gray-600 focus:outline-none" type="text" name="username" placeholder="Username" id="signInUsername" />
+                                <input className="account-input" type="text" name="username" placeholder="Username" id="signInUsername" />
                             </label>
 
-                            <label className="flex items-center col-span-12 border border-gray-400 group transition-all ease-linear delay-200 rounded-lg ring-offset-slate-50 hover:ring-1 hover:ring-offset-2 hover:ring-main-color/30 focus-within:ring-1 focus-within:ring-offset-2 focus-within:ring-main-color/30" htmlFor="signInPassword">
+                            <label className="account-label" htmlFor="signInPassword">
                                 <span className="pl-2.5 pr-2">
                                     <i className="fr fi-rr-lock relative top-0.5"></i>
                                 </span>
 
-                                <input className="w-full py-1.5 pr-4 bg-white rounded-r-lg placeholder:text-gray-600 focus:outline-none" type="password" name="password" placeholder="Password" id="signInPassword" />
+                                <input className="account-input" type="password" name="password" placeholder="Password" id="signInPassword" />
                             </label>
 
                             <div className="col-span-12 flex justify-between flex-wrap gap-4">
 
-                                <label htmlFor="rememberMe">
-                                    <input className="rounded-lg py-0.5 accent-main-color" type="checkbox" id="rememberMe" />
+                                <label className="flex items-center" htmlFor="rememberMe">
+                                    <input className="form-checkbox input-checkbox" type="checkbox" id="rememberMe" />
 
                                     <span className="pl-1">
                                         Remember me
@@ -78,7 +79,7 @@ const AccountComponent = () => {
 
                         </div>
 
-                        <button className="flex items-center gap-1.5 bg-main-color/90 text-white border border-main-color rounded-lg py-1.5 px-3 w-max ml-auto ring-offset-slate-50 hover:bg-main-color focus:bg-main-color hover:ring-1 hover:ring-offset-2 hover:ring-main-color/30 focus:ring-1 focus:ring-offset-2 focus:ring-main-color/30 active:bg-main-color active:text-white active:ring-1 active:ring-offset-2 active:ring-main-color/30" type="submit">
+                        <button className="form-btn" type="submit">
                             <i className="fr fi-rr-sign-in relative top-1"></i>
                             Sing In
                         </button>
@@ -107,58 +108,58 @@ const AccountComponent = () => {
 
                         <div className="grid gap-6 grid-cols-12">
 
-                            <label className="flex items-center col-span-12 border border-gray-400 group transition-all ease-linear delay-200 rounded-lg lg:col-span-6 ring-offset-slate-50 hover:ring-1 hover:ring-offset-2 hover:ring-main-color/30 focus-within:ring-1 focus-within:ring-offset-2 focus-within:ring-main-color/30" htmlFor="firstName">
+                            <label className="account-label span-2" htmlFor="firstName">
                                 <span className="pl-2.5 pr-2">
                                     <i className="fr fi-rr-edit relative top-[0.2rem]"></i>
                                 </span>
 
-                                <input className="w-full py-1.5 pr-4 bg-white rounded-r-lg placeholder:text-gray-600 focus:outline-none" type="text" name="firstname" placeholder="First name" id="firstName" />
+                                <input className="account-input" type="text" placeholder="First name" id="firstName" />
                             </label>
 
-                            <label className="flex items-center col-span-12 border border-gray-400 group transition-all ease-linear delay-200 rounded-lg lg:col-span-6 ring-offset-slate-50 hover:ring-1 hover:ring-offset-2 hover:ring-main-color/30 focus-within:ring-1 focus-within:ring-offset-2 focus-within:ring-main-color/30" htmlFor="lastName">
+                            <label className="account-label span-2" htmlFor="lastName">
                                 <span className="pl-2.5 pr-2">
                                     <i className="fr fi-rr-edit relative top-[0.2rem]"></i>
                                 </span>
 
-                                <input className="w-full py-1.5 pr-4 bg-white rounded-r-lg placeholder:text-gray-600 focus:outline-none" type="text" name="lastname" placeholder="Last name" id="lastName" />
+                                <input className="account-input" type="text" name="lastname" placeholder="Last name" id="lastName" />
                             </label>
 
-                            <label className="flex items-center col-span-12 border border-gray-400 group transition-all ease-linear delay-200 rounded-lg lg:col-span-6 ring-offset-slate-50 hover:ring-1 hover:ring-offset-2 hover:ring-main-color/30 focus-within:ring-1 focus-within:ring-offset-2 focus-within:ring-main-color/30" htmlFor="signInUsername">
+                            <label className="account-label span-2" htmlFor="signUpUsername">
                                 <span className="pl-2.5 pr-2">
                                     <i className="fr fi-rr-user relative top-0.5"></i>
                                 </span>
 
-                                <input className="w-full py-1.5 pr-4 bg-white rounded-r-lg placeholder:text-gray-600 focus:outline-none" type="text" name="signInUsername" placeholder="Username" id="signInUsername" />
+                                <input className="account-input" type="text" name="signUpUsername" placeholder="Username" id="signUpUsername" />
                             </label>
 
-                            <label className="flex items-center col-span-12 border border-gray-400 group transition-all ease-linear delay-200 rounded-lg lg:col-span-6 ring-offset-slate-50 hover:ring-1 hover:ring-offset-2 hover:ring-main-color/30 focus-within:ring-1 focus-within:ring-offset-2 focus-within:ring-main-color/30" htmlFor="email">
+                            <label className="account-label span-2" htmlFor="email">
                                 <span className="pl-2.5 pr-2">
-                                    <i className="fr fi-rr-user relative top-0.5"></i>
+                                    <i className="fr fi-rr-envelope relative top-0.5"></i>
                                 </span>
 
-                                <input className="w-full py-1.5 pr-4 bg-white rounded-r-lg placeholder:text-gray-600 focus:outline-none" type="email" name="email" placeholder="Email" id="email" />
+                                <input className="account-input" type="email" name="email" placeholder="Email" id="email" />
                             </label>
 
-                            <label className="flex items-center col-span-12 border border-gray-400 group transition-all ease-linear delay-200 rounded-lg lg:col-span-6 ring-offset-slate-50 hover:ring-1 hover:ring-offset-2 hover:ring-main-color/30 focus-within:ring-1 focus-within:ring-offset-2 focus-within:ring-main-color/30" htmlFor="SignUpPassword">
+                            <label className="account-label span-2" htmlFor="SignUpPassword">
                                 <span className="pl-2.5 pr-2">
-                                    <i className="fr fi-rr-lock-alt relative top-0.5"></i>
+                                    <i className="fr fi-rr-unlock relative top-0.5"></i>
                                 </span>
 
-                                <input className="w-full py-1.5 pr-4 bg-white rounded-r-lg placeholder:text-gray-600 focus:outline-none" type="password" name="SignUpPassword" placeholder="Password" id="SignUpPassword" />
+                                <input className="account-input" type="password" name="SignUpPassword" placeholder="Password" id="SignUpPassword" />
                             </label>
 
-                            <label className="flex items-center col-span-12 border border-gray-400 group transition-all ease-linear delay-200 rounded-lg lg:col-span-6 ring-offset-slate-50 hover:ring-1 hover:ring-offset-2 hover:ring-main-color/30 focus-within:ring-1 focus-within:ring-offset-2 focus-within:ring-main-color/30" htmlFor="confirmPassword">
+                            <label className="account-label span-2" htmlFor="confirmPassword">
                                 <span className="pl-2.5 pr-2">
                                     <i className="fr fi-rr-lock relative top-0.5"></i>
                                 </span>
 
-                                <input className="w-full py-1.5 pr-4 bg-white rounded-r-lg placeholder:text-gray-600 focus:outline-none" type="password" name="confirmPassword" placeholder="Comfirm password" id="confirmPassword" />
+                                <input className="account-input" type="password" name="confirmPassword" placeholder="Comfirm password" id="confirmPassword" />
                             </label>
 
                         </div>
 
-                        <button className="flex items-center gap-1.5 bg-main-color/90 text-white border border-main-color rounded-lg py-1.5 px-3 w-max ml-auto ring-offset-slate-50 hover:bg-main-color focus:bg-main-color hover:ring-1 hover:ring-offset-2 hover:ring-main-color/30 focus:ring-1 focus:ring-offset-2 focus:ring-main-color/30 active:bg-main-color active:text-white active:ring-1 active:ring-offset-2 active:ring-main-color/30" type="submit">
-                            <i className="fr fi-rr-check relative top-0.5"></i>
+                        <button className="form-btn" type="submit">
+                            <i className="fr fi-rr-paper-plane relative top-1"></i>
                             Sing Up
                         </button>
 

@@ -34,9 +34,9 @@ const Footer = () => {
             
             <footer className="bg-[#030313] text-white">
 
-                <div className="grid items-baseline gap-8 py-6 px-4 lg:grid-cols-12 lg:p-12">
+                <div className="grid items-baseline gap-8 py-6 px-4 sm:grid-cols-12 lg:p-12">
 
-                    <div className="grid gap-2 lg:col-span-4">
+                    <div className="grid gap-2 sm:col-span-6 lg:col-span-4">
                         
                         <h3 className="text-xl font-luckiest-guy">
                             Recent Posts
@@ -50,7 +50,7 @@ const Footer = () => {
 
                     </div>
 
-                    <div className="grid gap-2 lg:col-span-4">
+                    <div className="grid gap-2 sm:col-span-6 lg:col-span-4">
 
                         <h3 className="text-xl font-luckiest-guy">
                             About Poet's Elixir
@@ -70,7 +70,7 @@ const Footer = () => {
                                             
                     </div>
                     
-                    <div className="grid gap-2 lg:col-span-4">
+                    <div className="grid gap-2 sm:col-span-6 lg:col-span-4">
 
                         <h3 className="text-xl font-luckiest-guy">
                             We Are Social!
@@ -130,7 +130,7 @@ const Footer = () => {
 
             </footer>
 
-            <button className="scroll-to-top-btn fixed bottom-4 right-0 [transform-origin:0_0] translate-x-full transition-all delay-500 ease-in-out bg-main-color text-white rounded-md py-1.5 px-2.5" type="button" arial-label="Scroll to top button" onClick={scrollToTop}>
+            <button className="scroll-to-top-btn fixed bottom-4 right-0 [transform-origin:0_0] translate-x-full transition-all delay-500 ease-in-out bg-main-color text-white rounded-md py-1.5 px-2.5" type="button" arial-label="Scroll to top button" title="Scroll to top" onClick={scrollToTop}>
                 <i className="fr fi-rr-angle-up relative top-0.5"></i>
             </button>
 

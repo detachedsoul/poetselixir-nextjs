@@ -7,7 +7,7 @@ const Main = () => {
             
             <RecentPosts />
 
-            <span className="text-center grid place-items-center text-3xl pt-16 pb-20 px-4">
+            <span className="text-center grid place-items-center text-3xl pt-16 pb-24 px-4">
                 Discover More In . . .
             </span>
 
