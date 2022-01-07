@@ -7,7 +7,7 @@ const AccountComponent = () => {
 
             <div className="border-b border-gray-400 pb-4">
 
-                <div className="flex items-center gap-1 flex-wrap px-4 lg:px-12">
+                <div className="flex items-center gap-1 flex-wrap px-4 xs:px-8 lg:px-12">
 
                     <Link href="/">
                         <a className="text-blue-600 hover:underline hover:underline-offset-[3px] hover:decoration-blue-600 active:underline active:underline-offset-[3px] active:decoration-blue-600">
@@ -23,9 +23,9 @@ const AccountComponent = () => {
 
             </div>
 
-            <div className="py-8 px-4 grid gap-12 items-start lg:px-12 md:grid-cols-12">
+            <div className="py-8 px-4 grid gap-12 items-start xs:px-8 sm:px-6 lg:px-12 sm:grid-cols-12">
 
-                <div className="grid gap-6 md:col-span-6">
+                <div className="grid gap-6 sm:col-span-6">
                     
                     <div className="grid gap-0.5">
 
@@ -88,9 +88,9 @@ const AccountComponent = () => {
 
                 </div>
 
-                <div className="border-b border-gray-600 border-dotted lg:hidden h-1"></div>
+                <div className="border-b border-gray-600 border-dotted sm:hidden h-1"></div>
 
-                <div className="grid gap-6 pb-8 md:col-span-6">
+                <div className="grid gap-6 pb-8 sm:col-span-6">
                     
                     <div className="grid gap-0.5">
 

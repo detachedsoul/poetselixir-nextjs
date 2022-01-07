@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
 	content: ["components/**/*.js", "pages/**/*.js"],
 	safeList: [
@@ -5,6 +7,11 @@ module.exports = {
 		'show-to-top-btn'
 	],
 	theme: {
+		screens: {
+			xs: '450px',
+			semi: '600px',
+			...defaultTheme.screens,
+		},
 		extend: {
 			colors: {
 				"main-color": "#094758",
@@ -28,7 +35,7 @@ module.exports = {
 					"0%, 100%": { 'transform': 'translateX(0)' },
 					"50%": { 'transform': 'translateX(1rem)' }
 				},
-			}
+			},
 		},
 	},
 	plugins: [

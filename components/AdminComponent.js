@@ -7,7 +7,7 @@ const Admin = () => {
 
             <div className="border-b border-gray-400 pb-4">
 
-                <div className="flex items-center gap-1 flex-wrap px-4 lg:px-12">
+                <div className="flex items-center gap-1 flex-wrap px-4 xs:px-8 sm:px-6 semi:px-4 lg:px-12">
 
                     <Link href="/">
                         <a className="text-blue-600 hover:underline hover:underline-offset-[3px] hover:decoration-blue-600 active:underline active:underline-offset-[3px] active:decoration-blue-600">
@@ -23,7 +23,7 @@ const Admin = () => {
 
             </div>
 
-            <div className="py-8 px-4 lg:px-12 md:w-4/5 lg:w-3/5">
+            <div className="py-8 px-4 xs:px-8 sm:px-6 semi:px-4 lg:px-12 md:w-4/5 lg:w-3/5">
 
                 <h1 className="header text-4xl">
                     Poet's Elixir Admins

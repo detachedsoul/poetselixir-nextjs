@@ -18,4 +18,6 @@ This is a reproduction of [PoetsElixr](https://detachedsoul.github.io/poetselxii
 
 - Refactored the dropdown element to use states for controlling it's visibility.
 
+- Created custom breakpoints to make the site more responsive.
+
 The live demo of my progress can be found on [https://poetselixir.netlify.app](https://poetselixir.netlify.app)

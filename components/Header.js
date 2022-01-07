@@ -62,7 +62,7 @@ const Header = () => {
 
             <header className="flex flex-col gap-4 text-gray-900 sticky top-0 shadow-sm z-50 lg:bg-white lg:bg-opacity-50 lg:backdrop-blur-3xl lg:flex-row lg:justify-between lg:items-center lg:px-4">
 
-                <div className="backdrop-blur-3xl bg-white bg-opacity-50 flex items-center gap-4 justify-between py-0.5 px-4 lg:px-0 lg:bg-transparent lg:opacity-100 lg:backdrop-blur-none">
+                <div className="backdrop-blur-3xl bg-white bg-opacity-50 flex items-center gap-4 justify-between py-0.5 px-4 xs:px-8 lg:px-0 lg:bg-transparent lg:opacity-100 lg:backdrop-blur-none">
                     
                     <button className="lg:hidden" type="button" aria-label="Navigation menu toggle button" onClick={() => {
                         setNavActive (() => !isActive);
@@ -84,7 +84,7 @@ const Header = () => {
 
                 </div>
 
-                <nav className={`bg-white absolute right-0 top-full ${isActive ? 'translate-y-0' : '[transform:translateY(-150%)]'} transition-transform delay-500 ease-linear z-10 shadow w-4/5 pl-4 py-4 [transform-origin:0_0] lg:static lg:translate-y-0 lg:w-auto lg:bg-transparent lg:shadow-none lg:p-0 lg:shrink-0`}>
+                <nav className={`bg-white absolute right-0 top-full ${isActive ? 'translate-y-0' : '[transform:translateY(-150%)]'} transition-transform delay-500 ease-linear z-10 shadow w-4/5 semi:w-2/5 pl-4 py-4 [transform-origin:0_0] lg:static lg:translate-y-0 lg:w-auto lg:bg-transparent lg:shadow-none lg:p-0 lg:shrink-0`}>
 
                     <NavLinks 
                         navLinkClickEvent={ addActiveClass } 

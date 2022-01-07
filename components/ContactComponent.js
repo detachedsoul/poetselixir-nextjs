@@ -6,7 +6,7 @@ const ContactComponent = () => {
 
             <div className="border-b border-gray-400 pb-4">
 
-                <div className="flex items-center gap-1 flex-wrap px-4 lg:px-12">
+                <div className="flex items-center gap-1 flex-wrap px-4 xs:px-8  lg:px-12">
 
                     <Link href="/">
                         <a className="text-blue-600 hover:underline hover:underline-offset-[3px] hover:decoration-blue-600 active:underline active:underline-offset-[3px] active:decoration-blue-600">
@@ -22,9 +22,9 @@ const ContactComponent = () => {
 
             </div>
 
-            <div className="py-12 px-4 lg:px-12 grid gap-4 md:grid-cols-12 md:items-center lg:gap-12">
+            <div className="py-12 px-4 xs:px-8 sm:px-12 md:px-8 grid gap-4 md:grid-cols-12 md:items-center lg:gap-12">
 
-                <div className="md:border-r md:border-r-gray-400 md:pr-12 lg:col-span-7">
+                <div className="md:border-r md:border-r-gray-400 md:pr-4 md:col-span-7">
 
                     <h1 className="header text-xl mb-5">
                         Fill the form. It's easy.
@@ -32,9 +32,9 @@ const ContactComponent = () => {
 
                     <form className="grid gap-4" method="post">
 
-                        <div className="grid gap-y-3 gap-x-4 md:grid-cols-12">
+                        <div className="grid gap-y-3 gap-x-4 semi:grid-cols-12">
 
-                            <label className="grid gap-1 lg:col-span-6" htmlFor="name">
+                            <label className="grid gap-1 semi:col-span-6" htmlFor="name">
                                 <span>
                                     Name
                                     <span className="text-rose-800 relative pl-0.5 top-[0.18rem]">*</span>
@@ -42,7 +42,7 @@ const ContactComponent = () => {
                                 <input className="contact-input" type="text" id="name" placeholder="Name" autoComplete="off" />
                             </label>
 
-                            <label className="grid gap-1 lg:col-span-6" htmlFor="email">
+                            <label className="grid gap-1 semi:col-span-6" htmlFor="email">
                                 <span>
                                     Email
                                     <span className="text-rose-800 relative pl-0.5 top-[0.18rem]">*</span>
@@ -50,7 +50,7 @@ const ContactComponent = () => {
                                 <input className="contact-input" type="email" id="email" placeholder="Email" autoComplete="off" />
                             </label>
 
-                            <label className="grid gap-1 lg:col-span-12" htmlFor="subject">
+                            <label className="grid gap-1 semi:col-span-12" htmlFor="subject">
                                 <span>
                                     Subject
                                     <span className="text-rose-800 relative pl-0.5 top-[0.18rem]">*</span>
@@ -58,7 +58,7 @@ const ContactComponent = () => {
                                 <input className="contact-input" type="text" id="subject" placeholder="Subject" autoComplete="off" />
                             </label>
 
-                            <label className="grid gap-1 lg:col-span-12" htmlFor="messageContent">
+                            <label className="grid gap-1 semi:col-span-12" htmlFor="messageContent">
                                 <span>
                                     Message
                                     <span className="text-rose-800 relative pl-0.5 top-[0.18rem]">*</span>
@@ -77,7 +77,7 @@ const ContactComponent = () => {
 
                 </div>
 
-                <div className="hidden gap-2 md:grid lg:col-span-5">
+                <div className="hidden gap-2 md:grid md:col-span-5">
 
                     <h3 className="header text-2xl">
                         Let's talk about everything

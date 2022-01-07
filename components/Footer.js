@@ -31,12 +31,11 @@ const Footer = () => {
 
     return (
         <>
-            
             <footer className="bg-[#030313] text-white">
 
-                <div className="grid items-baseline gap-8 py-6 px-4 sm:grid-cols-12 lg:p-12">
+                <div className="grid items-baseline gap-8 py-6 px-4 xs:px-8 xs:py-10 sm:grid-cols-12 lg:p-12">
 
-                    <div className="grid gap-2 sm:col-span-6 lg:col-span-4">
+                    <div className="grid gap-2 sm:col-span-6 sm:order-3 lg:order-1 lg:col-span-4">
                         
                         <h3 className="text-xl font-luckiest-guy">
                             Recent Posts
@@ -50,7 +49,7 @@ const Footer = () => {
 
                     </div>
 
-                    <div className="grid gap-2 sm:col-span-6 lg:col-span-4">
+                    <div className="grid gap-2 sm:col-span-6 lg:order-2 lg:col-span-4">
 
                         <h3 className="text-xl font-luckiest-guy">
                             About Poet's Elixir
@@ -70,7 +69,7 @@ const Footer = () => {
                                             
                     </div>
                     
-                    <div className="grid gap-2 sm:col-span-6 lg:col-span-4">
+                    <div className="grid gap-2 sm:col-span-6 lg:order-3 lg:col-span-4">
 
                         <h3 className="text-xl font-luckiest-guy">
                             We Are Social!
@@ -82,7 +81,7 @@ const Footer = () => {
                                 Have a poem or a suggestion for us, a feature you'll like us to add or a bug to report? We'll love to hear from you.
                             </p>
 
-                            <p className="flex items-center gap-4">
+                            <p className="flex items-center text-center place-content-center sm:place-content-start gap-4">
 
                                 <a className="bg-sky-700 rounded-full text-xl hover:animate-pulse active:animate-pulse text-white" href="https://web.facebook.com/IamWisdomOjimah" target="_blank" rel="noopener noreferrer" aria-label="Contact us on Facebook" title="Reach us on Facebook">
                                     <i className="fab fa-facebook-f text-base relative py-2 px-[0.7rem]"></i>
@@ -112,7 +111,7 @@ const Footer = () => {
 
                 </div>
 
-                <div className="bg-[#373433] text-white text-center flex flex-col place-content-center gap-2 p-4">
+                <div className="bg-[#373433] text-white text-center py-4 px-2 space-y-2">
 
                     <p className="text-center">
                         <i className="far fa-copyright text-base"></i> 2021. All rights reserved.

@@ -27,7 +27,7 @@ const RecentPosts = () => {
 
             <div className="border-b border-gray-400 pb-4">
 
-                <div className="flex justify-between items-center gap-x-4 gap-y-1 flex-wrap px-4 lg:px-12">
+                <div className="flex justify-between items-center gap-x-4 gap-y-1 flex-wrap px-4 xs:px-8 sm:px-6 semi:px-4 lg:px-12">
 
                     <h3 className="header text-2xl"> 
                         Recent Posts
@@ -44,11 +44,11 @@ const RecentPosts = () => {
 
             </div>
 
-            <div className="grid gap-8 py-8 px-4 sm:grid-cols-12 lg:gap-8 lg:px-12">
+            <div className="grid gap-8 py-8 px-4 xs:px-8 sm:px-6 semi:px-4 semi:grid-cols-12 lg:gap-8 lg:px-12">
                 
                 {
                     posts.map(post => (
-                        <article className="grid gap-4 sm:col-span-6" key={post.id}>
+                        <article className="grid gap-4 semi:col-span-6" key={post.id}>
                             
                             <Image className="aspect-square object-cover w-full h-[200px] rounded-lg" src={post.image} alt={post.title} objectFit="cover" objectPosition="center" width="100%" height="200px" quality={100} title={post.title} layout="intrinsic"></Image>
 

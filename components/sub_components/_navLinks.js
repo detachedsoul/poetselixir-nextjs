@@ -13,7 +13,7 @@ const NavLinks = ({ navLinkClickEvent, dropdownEvent, isDropdownActive }) => {
         {
             id: 2,
             linkName: "Categories",
-            routeName: "/",
+            routeName: "/category",
             icon: "fr fi-rr-settings",
             isDropdown: true,
             dropdownLinks: [
@@ -54,10 +54,8 @@ const NavLinks = ({ navLinkClickEvent, dropdownEvent, isDropdownActive }) => {
             routeName: "/contact",
             icon: "fr fi-rr-envelope",
             isDropdown: false
-        }
+        },
     ];
-
-    // const [isActive, setDropdownActive] = useState(false);
 
     return (
 
@@ -92,15 +90,15 @@ const NavLinks = ({ navLinkClickEvent, dropdownEvent, isDropdownActive }) => {
 
                             &&
 
-                            <div className={`bg-slate-100 absolute [width:calc(100%-1rem)] lg:w-max z-10 top-[115%] lg:bg-white p-4 shadow-md left-4 rounded transition-all delay-500 ease-in lg:top-[120%] ${isDropdownActive ? '' : 'scale-0'}`}>
+                            <div className={`bg-slate-50 absolute [width:calc(100%-1rem)] lg:w-[calc(100%+5rem)] z-10 top-[115%]  p-4 shadow-md left-4 rounded transition-all delay-500 ease-in lg:top-[120%] ${isDropdownActive ? '' : 'scale-0'}`}>
                                 
-                                <ul className="flex flex-col gap-y-4">
+                                <ul className="flex flex-col gap-y-2">
 
                                     {navLink.dropdownLinks.map(dropdownLink => (
-                                        <li className="px-4" key={dropdownLink.id}>
+                                        <li key={dropdownLink.id}>
                                             <Link href={dropdownLink.routeName}>
                                             
-                                                <a className="hover:text-main-color hover:font-semibold active:text-main-color transition-colors">
+                                                <a className="hover:text-white hover:bg-main-color rounded active:text-white active:bg-main-color transition-colors py-1.5 px-4 block">
                                                     {dropdownLink.linkName}
                                                 </a>
 

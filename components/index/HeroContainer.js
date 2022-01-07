@@ -1,6 +1,6 @@
 const HeroContainer = () => {
     return (
-        <div className="bg-hero-bg text-white grid place-content-center bg-fixed bg-cover bg-center min-h-[70vh] py-8 px-4">
+        <div className="bg-hero-bg text-white grid place-content-center bg-fixed bg-cover bg-center min-h-[70vh] py-8 px-4 xs:px-8">
 
             <div className="flex flex-col gap-4 lg:w-[70%] lg:ml-4">
                 
