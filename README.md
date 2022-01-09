@@ -20,4 +20,28 @@ This is a reproduction of [PoetsElixr](https://detachedsoul.github.io/poetselxii
 
 - Created custom breakpoints to make the site more responsive.
 
+- Made the category page that lists all the posts for a given category (the category is gotten from the categories dropdown)
+
+- Created a custom api in the `api` folder for fetching different posts for each categories. This was achieved using Next's `getStaticProps` and `getStaticPaths` functions. It took a while for me to figure out that with `getStaticPaths` I don't need the query string of the api. For example, I wouldn't do something like:
+
+```javascript
+    export const getStaticPaths = async (context) => {
+        const req = await fetch(`http://localhost:3000/api/category/${context.params.category}`);
+        const category = await req.json();
+
+        // Code logic here
+    }
+```
+
+This is because according to this [dicussion](https://github.com/vercel/next.js/discussions/10951), `"getStaticPaths generates static files, which means they can't access querystring at generation time."` The solution which almost left me frustrated was just to do:
+
+```javascript
+    export const getStaticPaths = async () => {
+        const req = await fetch(`http://localhost:3000/api/category`);
+        const category = await req.json();
+
+        // Code logic here
+    }
+```
+
 The live demo of my progress can be found on [https://poetselixir.netlify.app](https://poetselixir.netlify.app)

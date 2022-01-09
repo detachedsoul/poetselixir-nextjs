@@ -7,12 +7,12 @@ const RandomCategoryPosts = () => {
         {
             categoryID: 1,
             postReferrenceID: 0,
-            categoryTitle: "Depression",
+            categoryTitle: "depression",
         },
         {
             categoryID: 2,
             postReferrenceID: 1,
-            categoryTitle: "Heartbreak",
+            categoryTitle: "heartbreak",
         }
     ];
 
@@ -80,11 +80,11 @@ const RandomCategoryPosts = () => {
 
                             <div className="flex justify-between items-center gap-x-4 gap-y-1 flex-wrap px-4 xs:px-8 sm:px-6  semi:px-4 lg:px-12">
 
-                                <h3 className="header text-2xl">
+                                <h3 className="capitalize header text-2xl">
                                     {category.categoryTitle}
                                 </h3>
 
-                                <Link href="/all-post">
+                                <Link href={`/category/${category.categoryTitle}`}>
                                     <a className="view-all-btn">
                                         View All
                                         <i className="fas fa-arrow-right text-base"></i>
@@ -108,8 +108,8 @@ const RandomCategoryPosts = () => {
 
                                             <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
 
-                                                <Link href="/category">
-                                                    <a className="text-rose-800 hover:underline hover:underline-offset-[3px] hover:decoration-rose-900">
+                                                <Link href={`/category/${category.categoryTitle}`}>
+                                                    <a className="capitalize text-rose-800 hover:underline hover:underline-offset-[3px] hover:decoration-rose-900">
                                                         {category.categoryTitle}
                                                     </a>
                                                 </Link>

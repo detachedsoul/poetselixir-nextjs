@@ -1,62 +1,6 @@
 import Link from 'next/link';
 
 const NavLinks = ({ navLinkClickEvent, dropdownEvent, isDropdownActive }) => {
-
-    const navLinks = [
-        {
-            id: 1,
-            linkName: "Home",
-            routeName: "/",
-            icon: "fr fi-rr-bank",
-            isDropdown: false
-        },
-        {
-            id: 2,
-            linkName: "Categories",
-            routeName: "/category",
-            icon: "fr fi-rr-settings",
-            isDropdown: true,
-            dropdownLinks: [
-                {
-                    id: 1,
-                    linkName: "Goodbyes",
-                    routeName: "/category/goodbyes",
-                },
-                {
-                    id: 2,
-                    linkName: "Grief",
-                    routeName: "/category/grief",
-                },
-                {
-                    id: 3,
-                    linkName: "Depression",
-                    routeName: "/category/depression",
-                },
-            ]
-        },
-        {
-            id: 3,
-            linkName: "Admin",
-            routeName: "/admin",
-            icon: "fr fi-rr-user",
-            isDropdown: false
-        },
-        {
-            id: 4,
-            linkName: "Account",
-            routeName: "/account",
-            icon: "fr fi-rr-user-add",
-            isDropdown: false
-        },
-        {
-            id: 5,
-            linkName: "Contact",
-            routeName: "/contact",
-            icon: "fr fi-rr-envelope",
-            isDropdown: false
-        },
-    ];
-
     return (
 
         <ul className="flex flex-col gap-2 lg:flex-row">
@@ -67,7 +11,7 @@ const NavLinks = ({ navLinkClickEvent, dropdownEvent, isDropdownActive }) => {
 
                         <Link href={navLink.routeName}>
                             
-                            <a className="nav-links flex items-center gap-2.5 py-2 px-4 rounded-tl-full rounded-bl-full ease-linear hover:bg-main-color hover:text-white hover:font-semibold lg:hover:text-main-color lg:hover:bg-transparent" onClick={(e) => {
+                            <a className="nav-links flex items-center gap-2.5 py-1.5 px-4 rounded-tl-full rounded-bl-full ease-linear hover:bg-main-color hover:text-white hover:font-semibold lg:hover:text-main-color lg:hover:bg-transparent lg:rounded-md" onClick={(e) => {
                                 if (navLink.isDropdown) {
                                     e.preventDefault();
                                     dropdownEvent(() => !isDropdownActive);
@@ -118,5 +62,60 @@ const NavLinks = ({ navLinkClickEvent, dropdownEvent, isDropdownActive }) => {
         </ul>
     );
 }
+
+export const navLinks = [
+    {
+        id: 1,
+        linkName: "Home",
+        routeName: "/",
+        icon: "fr fi-rr-bank",
+        isDropdown: false
+    },
+    {
+        id: 2,
+        linkName: "Categories",
+        routeName: "/category",
+        icon: "fr fi-rr-settings",
+        isDropdown: true,
+        dropdownLinks: [
+            {
+                id: 1,
+                linkName: "Goodbyes",
+                routeName: "/category/goodbyes",
+            },
+            {
+                id: 2,
+                linkName: "Grief",
+                routeName: "/category/grief",
+            },
+            {
+                id: 3,
+                linkName: "Depression",
+                routeName: "/category/depression",
+            },
+        ]
+    },
+    {
+        id: 3,
+        linkName: "Admin",
+        routeName: "/admin",
+        icon: "fr fi-rr-user",
+        isDropdown: false
+    },
+    {
+        id: 4,
+        linkName: "Account",
+        routeName: "/account",
+        icon: "fr fi-rr-user-add",
+        isDropdown: false
+    },
+    {
+        id: 5,
+        linkName: "Contact",
+        routeName: "/contact",
+        icon: "fr fi-rr-envelope",
+        isDropdown: false
+    },
+];
  
 export default NavLinks;

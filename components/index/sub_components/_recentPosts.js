@@ -7,7 +7,7 @@ const RecentPosts = () => {
         {
             id: "1",
             image: "/img/pic-1.png",
-            category: "Grief",
+            category: "grief",
             date: "25 Dec, 2021",
             title: "Flowers On Your Grave",
             content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
@@ -15,7 +15,7 @@ const RecentPosts = () => {
         {
             id: "2",
             image: "/img/pic-2.jpg",
-            category: "Goodbyes",
+            category: "goodbyes",
             date: "25 Dec, 2021",
             title: "Letting Go",
             content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
@@ -33,7 +33,7 @@ const RecentPosts = () => {
                         Recent Posts
                     </h3>
 
-                    <Link href="/all-post">
+                    <Link href="/posts">
                         <a className="view-all-btn">
                             View All
                             <i className="fas fa-arrow-right text-base"></i>
@@ -56,8 +56,8 @@ const RecentPosts = () => {
 
                                 <div className="flex items-center flex-wrap gap-x-4 gap-y-1">
 
-                                    <Link href="/category">
-                                        <a className="text-rose-800 hover:underline hover:underline-offset-[3px] hover:decoration-rose-900">
+                                    <Link href={`/category/${post.category}`}>
+                                        <a className="capitalize text-rose-800 hover:underline hover:underline-offset-[3px] hover:decoration-rose-900">
                                             {post.category}
                                         </a>
                                     </Link>
