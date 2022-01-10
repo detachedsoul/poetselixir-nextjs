@@ -6,7 +6,7 @@ const CategoryPost = ({ category }) => {
         <>
             {
                 category.map(category => (
-                    <section key={category.categoryID}>
+                    <section key={category.id}>
 
                         <div className="grid gap-8 py-8 px-4 xs:px-8 sm:px-6 semi:px-4 semi:grid-cols-12 lg:gap-8 lg:px-12">
 

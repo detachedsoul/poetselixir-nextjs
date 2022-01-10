@@ -12,7 +12,7 @@ const RandomCategoryPosts = () => {
         {
             categoryID: 2,
             postReferrenceID: 1,
-            categoryTitle: "heartbreak",
+            categoryTitle: "goodbyes",
         }
     ];
 

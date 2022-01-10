@@ -22,17 +22,19 @@ const Header = () => {
                 closeNav();
                 link.classList.add('active');
             } else {
-                link.classList.remove('active');
+                if (currentPath.asPath === link.attributes.href.nodeValue) {
+                    closeNav();
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
             }
         });
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentPath]);
 
-    const removeActiveClassFromLinks = (navLink) => {
-        if (isSearchBarActive) {
-            setSearchBarActive (() => !isSearchBarActive);
-        }
-
+    const removeActiveClassFromLinks = () => {
         let navLinks = document.querySelectorAll('.nav-links');
         navLinks.forEach(navLink => {
             navLink.classList.remove('active');
@@ -40,8 +42,8 @@ const Header = () => {
     };
     
     const addActiveClass = (navLink) => {
-        closeNav();
         navLink.target.classList.add('active');
+        closeNav();
     };
 
     const closeNav = () => {
@@ -50,6 +52,9 @@ const Header = () => {
         }
         if (isDropdownActive) {
             setDropdownActive(() => !isDropdownActive);
+        }
+        if (isSearchBarActive) {
+            setSearchBarActive (() => !isSearchBarActive);
         }
         removeActiveClassFromLinks();
     };

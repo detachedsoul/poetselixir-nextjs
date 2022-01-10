@@ -1,16 +1,15 @@
-import { categoryApi } from '../../categoryApi';
 import CategoryComponent from "../../components/CategoryComponent";
+import { server } from "../../config/config";
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 
 const Category = ({ category }) => {
-    const router = useRouter();
     return (
         <>
             <Head>
-                <title>Poet's Elixir &mdash; Account</title>
-                <meta name="description" content="Poet's Elixir contact form page" />
+                <title>
+                    Poet's Elixir &mdash; { category.map(category => category.categoryName) }
+                </title>
+                <meta name="description" content={ category.map(category => category.desc) } />
             </Head>
             <CategoryComponent category={ category } />
         </>
@@ -18,7 +17,13 @@ const Category = ({ category }) => {
 }
 
 export const getStaticProps = async (context) => {
-    const req = await fetch(`http://localhost:3000/api/category/${context.params.category}`);
+    const req = await fetch(`${server}/api/category/${context.params.category}`, {
+        method: 'GET',
+        headers: {
+            'User-Agent': '*',
+            Accept: 'application/json; charset=UTF-8',
+        },
+    });
     const category = await req.json();
 
     return {
@@ -28,8 +33,14 @@ export const getStaticProps = async (context) => {
     }
 }
 
-export const getStaticPaths = async (context) => {
-    const req = await fetch(`http://localhost:3000/api/category`);
+export const getStaticPaths = async () => {
+    const req = await fetch(`${server}/api/category`, {
+        method: 'GET',
+        headers: {
+            'User-Agent': '*',
+            Accept: 'application/json; charset=UTF-8',
+        },
+    });
     const categories = await req.json();
 
     const paths = categories.map(category => ({

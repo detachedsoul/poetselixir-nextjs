@@ -34,7 +34,7 @@ const NavLinks = ({ navLinkClickEvent, dropdownEvent, isDropdownActive }) => {
 
                             &&
 
-                            <div className={`bg-slate-50 absolute [width:calc(100%-1rem)] lg:w-[calc(100%+5rem)] z-10 top-[115%]  p-4 shadow-md left-4 rounded transition-all delay-500 ease-in lg:top-[120%] ${isDropdownActive ? '' : 'scale-0'}`}>
+                            <div className={`bg-slate-50 absolute [width:calc(100%-1rem)] lg:w-[calc(100%+5rem)] z-10 top-full  p-4 shadow-md left-4 rounded transition-all delay-500 ease-in lg:top-[125%] ${isDropdownActive ? '' : 'scale-0'}`}>
                                 
                                 <ul className="flex flex-col gap-y-2">
 
@@ -42,7 +42,7 @@ const NavLinks = ({ navLinkClickEvent, dropdownEvent, isDropdownActive }) => {
                                         <li key={dropdownLink.id}>
                                             <Link href={dropdownLink.routeName}>
                                             
-                                                <a className="hover:text-white hover:bg-main-color rounded active:text-white active:bg-main-color transition-colors py-1.5 px-4 block">
+                                                <a className="nav-links hover:text-white hover:bg-main-color rounded active:text-white active:bg-main-color transition-colors py-1.5 px-4 block" onClick={navLinkClickEvent}>
                                                     {dropdownLink.linkName}
                                                 </a>
 

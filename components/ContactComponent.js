@@ -24,7 +24,7 @@ const ContactComponent = () => {
 
             <div className="py-12 px-4 xs:px-8 sm:px-12 md:px-8 grid gap-4 md:grid-cols-12 md:items-center lg:gap-12">
 
-                <div className="md:border-r md:border-r-gray-400 md:pr-4 md:col-span-7">
+                <div className="md:border-r md:border-r-gray-400 md:pr-4 md:col-span-7 lg:pr-12">
 
                     <h1 className="header text-xl mb-5">
                         Fill the form. It's easy.
@@ -95,4 +95,4 @@ const ContactComponent = () => {
     );
 }
 
-export default ContactComponent
+export default ContactComponent;
