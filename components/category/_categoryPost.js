@@ -36,7 +36,7 @@ const CategoryPost = ({ category }) => {
                                             </div>
 
                                             <h2 className="font-luckiest-guy text-main-color text-2xl font-thin ">
-                                                <Link href="/post">
+                                                <Link href={`/posts/${category.categoryName}/${post.id}/${post.title.toLowerCase()}`}>
                                                     <a className="hover:underline hover:underline-offset-[3px] hover:decoration-main-color active:underline active:underline-offset-[3px] active:decoration-main-color">
                                                         {post.title}
                                                     </a>
@@ -47,7 +47,7 @@ const CategoryPost = ({ category }) => {
                                                 {post.excerpt}
                                             </p>
 
-                                            <Link href="/post">
+                                            <Link href={`/posts/${category.categoryName}/${post.id}/${post.title.toLowerCase()}`}>
                                                 <a className="continue-reading-btn group">
                                                     Continue Reading
                                                     <i className="fas fa-arrow-right text-base opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-focus-within:opacity-100"></i>

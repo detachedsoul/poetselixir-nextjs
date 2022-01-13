@@ -46,4 +46,8 @@ This is because according to this [dicussion](https://github.com/vercel/next.js/
 
 - Harmonized the dropdown active indicator to match that of other links in the navbar.
 
+- Added a `jsconfig.json` file to make imports less error-prone and also more readable. I didn't start using it immediately yet.
+
+- Added the `posts` api to get specific posts by the user.
+
 The live demo of my progress can be found on [https://poetselixir.netlify.app](https://poetselixir.netlify.app)
