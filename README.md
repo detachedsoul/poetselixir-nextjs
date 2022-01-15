@@ -52,4 +52,6 @@ This is because according to this [dicussion](https://github.com/vercel/next.js/
 
 - For close to a week I had problems deploying the site to production. This was because I was using the `fetch api` directly in my `getStaticProps` and `getStaticPaths` functions. I even had to create a custom JSONPlaceholder api endpoint to no avail. I stumbled upon a post from stackoverflow [which had a question about deployement failing](https://stackoverflow.com/questions/66202840/fetch-error-when-building-next-js-static-website-in-production). I then had to refactor my code and the solution all along was to use  the same logic I was using to fetch my datat from my api directly in my `getStaticProps` and `getStaticPaths.`
 
+- Chanegd the index posts to to valid posts and also added more post to the    `postsApi` and update it accordingly in the `categoryApi` file.
+
 The live demo of my progress can be found on [https://poetselixir.netlify.app](https://poetselixir.netlify.app)

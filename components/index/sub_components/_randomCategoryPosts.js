@@ -17,57 +17,63 @@ const RandomCategoryPosts = () => {
     ];
 
     const posts = [
-        [
-            {
-                id: "1",
-                image: "/img/pic-3.jpg",
-                date: "26 Dec, 2021",
-                title: "You Don't Love Me",
-                content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
-            },
+		[
+			{
+				id: 2,
+				image: "/img/pic-2.jpg",
+				title: "Youdontloveme",
+				date: "26 Dec, 2021",
+				content:
+					"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
+			},
 
-            {
-                id: "2",
-                image: "/img/pic-4.jpg",
-                date: "26 Dec, 2021",
-                title: "Memories",
-                content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
-            },
+			{
+				id: "4",
+				image: "/img/pic-4.jpg",
+				date: "26 Dec, 2021",
+				title: "I'll Be Fine",
+				content:
+					"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
+			},
 
-            {
-                id: "3",
-                image: "/img/pic-5.jpg",
-                date: "26 Dec, 2021",
-                title: "DeForsaken",
-                content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
-            }
-        ],
-        [
-            {
-                id: "1",
-                image: "/img/pic-6.jpeg",
-                date: "26 Dec, 2021",
-                title: "Flowers On Your Grave",
-                content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
-            },
+			{
+				id: "9",
+				image: "/img/pic-1.png",
+				date: "26 Dec, 2021",
+				title: "The Devil Wears Prada",
+				content:
+					"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
+			},
+		],
+		[
+			{
+				id: "6",
+				image: "/img/pic-6.jpeg",
+				date: "26 Dec, 2021",
+				title: "Your Loss",
+				content:
+					"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
+			},
 
-            {
-                id: "2",
-                image: "/img/pic-7.jpg",
-                date: "26 Dec, 2021",
-                title: "Letting Go",
-                content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
-            },
+			{
+				id: "3",
+				image: "/img/pic-3.jpg",
+				date: "26 Dec, 2021",
+				title: "Everthing's Going My Way",
+				content:
+					"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
+			},
 
-            {
-                id: "3",
-                image: "/img/pic-8.jpg",
-                date: "26 Dec, 2021",
-                title: "Wreckage",
-                content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
-            }
-        ],
-    ];
+			{
+				id: "7",
+				image: "/img/pic-7.jpg",
+				date: "26 Dec, 2021",
+				title: "No Way Home",
+				content:
+					"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
+			},
+		],
+	];
 
     return (
         <div className="space-y-12">
