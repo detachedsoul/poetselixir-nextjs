@@ -1,6 +1,6 @@
 // import CategoryComponent from "../../components/CategoryComponent";
-import { server } from "../../../../config/config";
 import Head from 'next/head';
+import { postsApi } from '../../../../postsApi';
 
 const Post = ({ post }) => {
     return (
@@ -20,36 +20,18 @@ const Post = ({ post }) => {
     );
 }
 
-export const getStaticProps = async (context) => {
-    const req = await fetch(`${server}/api/posts/${context.params.category}/${context.params.id}/${context.params.title}`, {
-        method: 'GET',
-        headers: {
-            'User-Agent': '*',
-            Accept: 'application/json; charset=UTF-8',
-        },
-    });
-    const post = await req.json();
+export const getStaticProps = async ({ params: { category, id, title } }) => {
+    const post = postsApi.filter(post => post.category === category && post.id.toString() === id && post.title.toLowerCase() === title);
 
     return {
         props: {
-            post
-        }
+            post,
+        },
     }
 }
 
 export const getStaticPaths = async () => {
-    const req = await fetch(`${server}/api/posts`, {
-        method: 'GET',
-        headers: {
-            'User-Agent': '*',
-            Accept: 'application/json; charset=UTF-8',
-        },
-    });
-    const posts = await req.json();
-
-    const paths = posts.map(post => ({
-        params: { category: post.category, id: post.id.toString(), title: post.title.toLowerCase() }
-    }));
+    const paths = postsApi.map(({ category, id, title }) => ({ params: { category: category, id: id.toString(), title: title.toLowerCase() } }));
 
     return {
         paths,

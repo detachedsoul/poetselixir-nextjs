@@ -1,51 +1,33 @@
 import CategoryComponent from "../../components/CategoryComponent";
-import { server } from "../../config/config";
+import { categoryApi } from "../../categoryApi";
 import Head from 'next/head';
 
-const Category = ({ category }) => {
+const Category = ({ categories }) => {
     return (
         <>
             <Head>
                 <title>
-                    Poet's Elixir &mdash; { category.map(category => category.categoryName) }
+                    Poet's Elixir &mdash; { categories.map(category => category.categoryName) }
                 </title>
-                <meta name="description" content={ category.map(category => category.desc) } />
+                <meta name="description" content={ categories.map(category => category.desc) } />
             </Head>
-            <CategoryComponent category={ category } />
+            <CategoryComponent category={ categories } />
         </>
     );
 }
 
-export const getStaticProps = async (context) => {
-    const req = await fetch(`${server}/api/category/${context.params.category}`, {
-        method: 'GET',
-        headers: {
-            'User-Agent': '*',
-            Accept: 'application/json; charset=UTF-8',
-        },
-    });
-    const category = await req.json();
+export const getStaticProps = async ({ params: { category } }) => {
+    const categories = categoryApi.filter(categories => categories.categoryName === category);
 
     return {
         props: {
-            category
-        }
+            categories,
+        },
     }
 }
 
 export const getStaticPaths = async () => {
-    const req = await fetch(`${server}/api/category`, {
-        method: 'GET',
-        headers: {
-            'User-Agent': '*',
-            Accept: 'application/json; charset=UTF-8',
-        },
-    });
-    const categories = await req.json();
-
-    const paths = categories.map(category => ({
-        params: {category: category.categoryName}
-    }));
+    const paths = categoryApi.map(({ categoryName }) => ({ params: { category: categoryName } }));
 
     return {
         paths,

@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-/src
 /public/fonts/fonts.css
 /public/icons/uicons.css
 /.pnp
