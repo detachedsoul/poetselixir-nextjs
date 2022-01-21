@@ -11,7 +11,7 @@ const NavLinks = ({ navLinkClickEvent, dropdownEvent, isDropdownActive }) => {
 
                         <Link href={navLink.routeName}>
                             
-                            <a className="nav-links flex items-center gap-2.5 py-1.5 px-4 rounded-tl-full rounded-bl-full ease-linear hover:bg-main-color hover:text-white hover:font-semibold lg:hover:text-main-color lg:hover:bg-transparent lg:rounded-md" onClick={(e) => {
+                            <a className="nav-links flex items-center gap-2.5 py-1.5 px-4 rounded-tl-full rounded-bl-full ease-linear hover:bg-main-color hover:text-white hover:font-semibold lg:hover:text-main-color lg:hover:bg-transparent lg:rounded-md xl:py-2.5" onClick={(e) => {
                                 if (navLink.isDropdown) {
                                     e.preventDefault();
                                     dropdownEvent(() => !isDropdownActive);
@@ -42,7 +42,7 @@ const NavLinks = ({ navLinkClickEvent, dropdownEvent, isDropdownActive }) => {
                                         <li key={dropdownLink.id}>
                                             <Link href={dropdownLink.routeName}>
                                             
-                                                <a className="nav-links hover:text-white hover:bg-main-color rounded active:text-white active:bg-main-color transition-colors py-1.5 px-4 block" onClick={navLinkClickEvent}>
+                                                <a className="nav-links hover:text-white hover:bg-main-color rounded active:text-white active:bg-main-color transition-colors py-1.5 px-4 block xl:py-2.5" onClick={navLinkClickEvent}>
                                                     {dropdownLink.linkName}
                                                 </a>
 

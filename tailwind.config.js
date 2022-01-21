@@ -17,6 +17,9 @@ module.exports = {
 				"main-color": "#094758",
 				"secondary-color": "#581A09",
 			},
+			boxShadow: {
+				"comment-shadow": "5px 6px 20px 0 rgba(0 0 0 / 5%)"
+			},
 			fontFamily: {
 				"pacifico": "Pacifico, cursive",
 				"open-sans": "'Open Sans', sans-serif",

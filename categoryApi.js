@@ -38,8 +38,8 @@ export const categoryApi = [
 			{
 				id: "1",
 				image: "/img/pic-1.png",
-				date: "25 Dec, 2021",
-				title: "Flowers On Your Grave",
+				postedOn: "25 Dec, 2021",
+				title: "Some Random Title",
 				excerpt:
 					"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
 			},

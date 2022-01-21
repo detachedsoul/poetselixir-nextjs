@@ -49,8 +49,13 @@ const RecentPosts = () => {
                 {
                     posts.map(post => (
                         <article className="grid gap-4 semi:col-span-6" key={post.id}>
+
+                            <div className="relative h-[200px] lg:h-[250px] xl:h-[300px]">
+
+                                <Image className="aspect-square object-cover w-full rounded-lg" src={post.image} alt={post.title} objectFit="cover" objectPosition="center" width="100%" height="100%" quality={100} title={post.title} layout="fill"></Image>
+
+                            </div>
                             
-                            <Image className="aspect-square object-cover w-full h-[200px] rounded-lg" src={post.image} alt={post.title} objectFit="cover" objectPosition="center" width="100%" height="200px" quality={100} title={post.title} layout="intrinsic"></Image>
 
                             <div className="grid gap-2">
 

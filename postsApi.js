@@ -6,6 +6,8 @@ export const postsApi = [
 		title: "Some Random Title",
 		postedOn: "8 Jan, 2022",
 		body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
+		postedBy: "detachedsoul",
+		author: "Some Random Writter"
 	},
 	{
 		id: 2,
@@ -14,6 +16,8 @@ export const postsApi = [
 		title: "Youdontloveme",
 		postedOn: "9 Jan, 2022",
 		body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
+		postedBy: "detachedsoul",
+		author: "Some Random Writter"
 	},
 	{
 		id: 3,
@@ -22,6 +26,8 @@ export const postsApi = [
 		title: "Everthing's Going My Way",
 		postedOn: "10 Jan, 2022",
 		body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
+		postedBy: "detachedsoul",
+		author: "Some Random Writter"
 	},
 	{
 		id: 4,
@@ -30,6 +36,8 @@ export const postsApi = [
 		title: "I'll Be Fine",
 		postedOn: "11 Jan, 2022",
 		body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
+		postedBy: "detachedsoul",
+		author: "Some Random Writter"
 	},
 	{
 		id: 5,
@@ -38,6 +46,8 @@ export const postsApi = [
 		title: "Not My Regular Self",
 		postedOn: "12 Jan, 2022",
 		body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
+		postedBy: "detachedsoul",
+		author: "Some Random Writter"
 	},
 	{
 		id: 6,
@@ -46,6 +56,8 @@ export const postsApi = [
 		title: "Your Loss",
 		postedOn: "13 Jan, 2022",
 		body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
+		postedBy: "detachedsoul",
+		author: "Some Random Writter"
 	},
 	{
 		id: 7,
@@ -54,6 +66,8 @@ export const postsApi = [
 		title: "No Way Home",
 		postedOn: "15 Jan, 2022",
 		body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
+		postedBy: "detachedsoul",
+		author: "Some Random Writter"
 	},
 	{
 		id: 8,
@@ -62,6 +76,8 @@ export const postsApi = [
 		title: "The Night Is Still Young",
 		postedOn: "15 Jan, 2022",
 		body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
+		postedBy: "detachedsoul",
+		author: "Some Random Writter"
 	},
 	{
 		id: 9,
@@ -70,5 +86,7 @@ export const postsApi = [
 		title: "The Devil Wears Prada",
 		postedOn: "15 Jan, 2022",
 		body: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, quasi optio laboriosam laudantium aliquid porro incidunt, esse nihil non a repudiandae cupiditate ex quam. Necessitatibus illo voluptatibus explicabo error atque.",
+		postedBy: "detachedsoul",
+		author: "Some Random Writter"
 	},
 ];

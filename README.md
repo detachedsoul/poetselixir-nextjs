@@ -54,4 +54,6 @@ This is because according to this [dicussion](https://github.com/vercel/next.js/
 
 - Chanegd the index posts to to valid posts and also added more post to the    `postsApi` and update it accordingly in the `categoryApi` file.
 
-The live demo of my progress can be found on [https://poetselixir.netlify.app](https://poetselixir.netlify.app)
+- Made the `post` page to display individual post's.
+
+The live demo of my progress can be found on [https://poetselixir.netlify.app](https://poetselixir.netlify.app) or [https://poetselixir.vercel.app](https://poetselixir.vercel.app)

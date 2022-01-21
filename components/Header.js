@@ -65,7 +65,7 @@ const Header = () => {
                 <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
             </Head>
 
-            <header className="flex flex-col gap-4 text-gray-900 sticky top-0 shadow-sm z-50 lg:bg-white lg:bg-opacity-50 lg:backdrop-blur-3xl lg:flex-row lg:justify-between lg:items-center lg:px-4">
+            <header className="flex flex-col gap-4 text-gray-900 sticky top-0 shadow-sm z-50 lg:bg-white lg:bg-opacity-50 lg:backdrop-blur-3xl lg:flex-row lg:justify-between lg:items-center lg:px-4 xl:py-4">
 
                 <div className="backdrop-blur-3xl bg-white bg-opacity-50 flex items-center gap-4 justify-between py-0.5 px-4 xs:px-8 lg:px-0 lg:bg-transparent lg:opacity-100 lg:backdrop-blur-none">
                     
